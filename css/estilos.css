@@ -579,77 +579,116 @@ body {
 }
 
 /* ================= SECCIÓN 7: PROFESORES FALLECIDOS ================= */
-.sec-memorial {
-  padding: 80px 0;
-  background-color: #0F172A;
-  color: var(--blanco);
-}
-
-.encabezado-claro h2 {
-  color: var(--blanco);
-}
-
-.encabezado-claro p {
-  color: #CBD5E1;
-}
-
-.etiqueta-memorial {
-  background-color: rgba(251, 191, 36, 0.16);
-  color: #FBBF24;
-  border: 1px solid rgba(251, 191, 36, 0.35);
-}
-
-.grid-memorial {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.card-memorial {
-  background-color: #1E293B;
-  border: 1px solid #334155;
-  border-top: 4px solid #FBBF24;
-  border-radius: var(--radio);
-  padding: 28px 22px;
+.homenaje-institucional {
+  background-color: #09111e;
+  color: #f8fafc;
+  padding: 70px 20px;
   text-align: center;
 }
 
-.memorial-foto {
-  width: 104px;
-  height: 104px;
-  margin: 0 auto 16px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid #FBBF24;
-  background-color: #334155;
+.homenaje-contenedor {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
-.memorial-foto img {
+.insignia-homenaje {
+  display: inline-block;
+  background-color: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.titulo-homenaje {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.descripcion-homenaje {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.grid-homenaje {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.tarjeta-homenaje {
+  background-color: #162336;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-top: 3px solid #f59e0b;
+  border-radius: 14px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.avatar-homenaje {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 2px solid #f59e0b;
+  background-color: #0e1827;
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.avatar-homenaje img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(35%);
 }
 
-.card-memorial h3 {
-  font-family: var(--fuente-titulo);
-  font-size: 1.1rem;
-  color: var(--blanco);
-  margin-bottom: 4px;
+.nombre-homenaje {
+  margin: 0 0 6px;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.memorial-area {
-  display: block;
-  font-size: 0.84rem;
-  color: #FBBF24;
+.especialidad-homenaje {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  color: #fbbf24;
 }
 
-.card-memorial p {
-  font-size: 0.92rem;
-  color: #CBD5E1;
+.datos-homenaje,
+.padres-homenaje {
+  margin: 4px 0;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.frase-homenaje {
+  margin: 16px 0 0;
   font-style: italic;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  line-height: 1.5;
 }
 
 /* ================= SECCIÓN 8: MEMORÁNDUM ================= */
