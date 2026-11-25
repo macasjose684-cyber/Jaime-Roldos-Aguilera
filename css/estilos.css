@@ -1267,8 +1267,12 @@ body {
   display: none;
 }
 
-.btn-drawer-nav {
+.btn-drawer-nav,
+.btn-cerrar-drawer {
   display: none;
+}
+
+.btn-drawer-nav {
   background-color: transparent;
   color: var(--vino-principal);
   border: 1.5px solid var(--vino-principal);
@@ -1290,6 +1294,25 @@ body {
     display: inline-flex;
   }
 
+  .btn-cerrar-drawer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+  }
+
   .menu-nav {
     position: fixed;
     top: 0;
@@ -1302,7 +1325,7 @@ body {
     align-items: stretch;
     flex-wrap: nowrap;
     gap: 6px;
-    padding: 72px 16px 20px;
+    padding: 20px 16px;
     background-color: #1e1e20;
     border-right: 2px solid var(--dorado);
     overflow-y: auto;
