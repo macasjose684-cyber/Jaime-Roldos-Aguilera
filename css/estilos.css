@@ -163,7 +163,6 @@ body {
   color: var(--blanco);
 }
 
-
 /* ================= SECCIÓN 1: PORTADA ================= */
 .sec-portada {
   position: relative;
@@ -929,8 +928,9 @@ body {
 /* ================= DISEÑO ADAPTABLE (RESPONSIVE) ================= */
 @media (max-width: 900px) {
   .nav-contenido {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .grid-resena,
@@ -1150,6 +1150,7 @@ body {
     padding: 56px 16px;
   }
 }
+
 /* ================= FOTOS EN AUTORIDADES ================= */
 .autoridad-cabecera {
   display: flex;
@@ -1195,6 +1196,7 @@ body {
   margin-top: 6px;
   margin-bottom: 0;
 }
+
 /* ================= ESTILOS MODAL EASTER EGG ================= */
 .modal-easter {
   position: fixed;
@@ -1254,10 +1256,12 @@ body {
   line-height: 1;
   cursor: pointer;
 }
+
 .escudo-nav,
 .modal-easter-cerrar {
   touch-action: manipulation;
 }
+
 /* ================= MENÚ LATERAL SOLO HTML + CSS ================= */
 .drawer-check {
   display: none;
@@ -1266,8 +1270,8 @@ body {
 .btn-drawer-nav {
   display: none;
   background-color: transparent;
-  color: var(--vino-principal, #6b1d2f);
-  border: 1.5px solid var(--vino-principal, #6b1d2f);
+  color: var(--vino-principal);
+  border: 1.5px solid var(--vino-principal);
   border-radius: 8px;
   width: 42px;
   height: 42px;
@@ -1278,6 +1282,7 @@ body {
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
+  flex-shrink: 0;
 }
 
 @media (max-width: 900px) {
@@ -1285,7 +1290,7 @@ body {
     display: inline-flex;
   }
 
-  .nav-enlaces {
+  .menu-nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -1295,10 +1300,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    flex-wrap: nowrap;
     gap: 6px;
     padding: 72px 16px 20px;
     background-color: #1e1e20;
-    border-right: 2px solid var(--dorado, #c59b27);
+    border-right: 2px solid var(--dorado);
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
@@ -1307,11 +1313,11 @@ body {
   }
 
   /* Cuando se marca el checkbox, desliza el menú hacia adentro */
-  .drawer-check:checked ~ .nav-enlaces {
+  .drawer-check:checked ~ .menu-nav {
     transform: translateX(0);
   }
 
-  .nav-enlaces a {
+  .menu-nav a {
     color: #f3f3f5;
     padding: 10px 12px;
     border-radius: 8px;
@@ -1319,7 +1325,12 @@ body {
     font-size: 0.95rem;
   }
 
-  .nav-enlaces a:hover {
+  .menu-nav a:hover {
     background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .menu-nav .btn-nav {
+    text-align: center;
+    margin-top: 6px;
   }
 }
