@@ -163,6 +163,7 @@ body {
   color: var(--blanco);
 }
 
+
 /* ================= SECCIÓN 1: PORTADA ================= */
 .sec-portada {
   position: relative;
@@ -1256,4 +1257,69 @@ body {
 .escudo-nav,
 .modal-easter-cerrar {
   touch-action: manipulation;
+}
+/* ================= MENÚ LATERAL SOLO HTML + CSS ================= */
+.drawer-check {
+  display: none;
+}
+
+.btn-drawer-nav {
+  display: none;
+  background-color: transparent;
+  color: var(--vino-principal, #6b1d2f);
+  border: 1.5px solid var(--vino-principal, #6b1d2f);
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.35rem;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+@media (max-width: 900px) {
+  .btn-drawer-nav {
+    display: inline-flex;
+  }
+
+  .nav-enlaces {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    max-width: 82vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 72px 16px 20px;
+    background-color: #1e1e20;
+    border-right: 2px solid var(--dorado, #c59b27);
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 2500;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.45);
+  }
+
+  /* Cuando se marca el checkbox, desliza el menú hacia adentro */
+  .drawer-check:checked ~ .nav-enlaces {
+    transform: translateX(0);
+  }
+
+  .nav-enlaces a {
+    color: #f3f3f5;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .nav-enlaces a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
 }

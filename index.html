@@ -23,6 +23,9 @@
   <header class="navbar">
     <div class="contenedor nav-contenido">
       <a href="#portada" class="marca">
+        <!-- BOTÓN MENÚ LATERAL SOLO HTML + CSS -->
+        <input type="checkbox" id="toggle-drawer" class="drawer-check" aria-hidden="true" />
+        <label for="toggle-drawer" class="btn-drawer-nav" aria-label="Abrir navegación">☰</label>
         <img src="img/logo.jfif" alt="Escudo Jaime Roldós Aguilera" class="escudo-nav" />
         <div class="marca-texto">
           <span class="marca-tipo">Unidad Educativa · AMIE 23H00825</span>
@@ -834,7 +837,7 @@
 
   <script>
     (function () {
-      const claveSecreta = "carloselpro";
+      const claveSecreta = "3ro";
       let bufferTeclas = "";
       let toquesSecretos = 0;
       let temporizadorToques = null;
